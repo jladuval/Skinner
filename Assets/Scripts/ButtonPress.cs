@@ -16,8 +16,7 @@ public class ButtonPress : MonoBehaviour {
 			Vector2 touchPos = new Vector2(wp.x, wp.y);
 			if (collider2D == Physics2D.OverlapPoint(touchPos))
 			{
-				//your code
-				
+
 			}
 		}
 	}
