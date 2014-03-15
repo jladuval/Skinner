@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GUI : MonoBehaviour {
 
+	public GameObject MousePile;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -11,5 +13,9 @@ public class GUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		GameObject.Find ("Food").guiText.text = Status.Food + " Food";
+		if (Status.Food > 10) {
+			MousePile.SetActive (true);
+		}
+
 	}
 }

@@ -2,10 +2,6 @@
 using System.Collections;
 
 public class ButtonPress : MonoBehaviour {
-
-	private int count = 0;
-	private int lastSecond = 0;
-
 	// Use this for initialization
 	void Start () {
 	
@@ -13,7 +9,6 @@ public class ButtonPress : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		int now = (int)(Mathf.Floor (Time.time));
 		if (Input.GetMouseButtonDown(0))
 		{
 			Vector3 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);

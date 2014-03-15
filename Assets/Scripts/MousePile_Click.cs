@@ -43,8 +43,11 @@ public class MousePile_Click : MonoBehaviour {
 		
 	private void CreateMouse(){
 		NumMice += 1;
+		foreach (var mouse in GameObject.FindGameObjectsWithTag("Mouse")) {
+			GameObject.Destroy(mouse);
+		}
 		foreach(var point in GetNPointsOnCircle(new Vector3(0,0,0),1.55f, NumMice)){
-			var mouse = Instantiate(mousePrefab, point, Quaternion.identity);
+			Instantiate(mousePrefab, point, Quaternion.identity);
 		}		
 	}
 }
