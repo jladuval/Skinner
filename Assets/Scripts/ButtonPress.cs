@@ -3,6 +3,9 @@ using System.Collections;
 
 public class ButtonPress : MonoBehaviour {
 
+	private int count = 0;
+	private int lastSecond = 0;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -10,14 +13,17 @@ public class ButtonPress : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.touchCount == 1)
+		int now = (int)(Mathf.Floor (Time.time));
+		if (Input.GetMouseButtonDown(0))
 		{
-			Vector3 wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+			Vector3 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			Vector2 touchPos = new Vector2(wp.x, wp.y);
 			if (collider2D == Physics2D.OverlapPoint(touchPos))
 			{
-
+				Status.Food += 1;
 			}
+
+
 		}
 	}
 }
