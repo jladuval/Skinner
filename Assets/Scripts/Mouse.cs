@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Mouse : MonoBehaviour {
 	private float timeElapsed = 0;
-	private float interval = 1;
+	private float interval = 5;
 	// Use this for initialization
 	void Start () {
 	

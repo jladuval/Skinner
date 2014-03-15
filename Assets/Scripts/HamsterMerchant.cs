@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ButtonPress : MonoBehaviour {
+public class HamsterMerchant : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 	
@@ -9,8 +10,6 @@ public class ButtonPress : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Physics.Collision.IsSelected(collider2D)){
-			Status.Food += 1;
-		}
+		
 	}
 }
